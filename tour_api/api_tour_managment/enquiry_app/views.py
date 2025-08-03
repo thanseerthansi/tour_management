@@ -27,7 +27,7 @@ class EnquiryView(ListAPIView):
         try:
             try:id = request.data['id']
             except: id = None
-            try:related_package = request.data['related_package']
+            try:related_package = request.data['related_package_id']
             except: related_package = None
             msg = ""
             request_data = request.data.copy()
@@ -35,7 +35,7 @@ class EnquiryView(ListAPIView):
                 try:
                     related_package = Schedule_model.objects.get(id=related_package)
                     
-                    request_data['city'] = city_obj.id
+                    request_data['related_package'] = related_package.id
                 except Schedule_model.DoesNotExist:
                     return Response({"status": status.HTTP_404_NOT_FOUND, "message": "Related package not found"})
             if id:

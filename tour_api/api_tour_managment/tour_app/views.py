@@ -22,8 +22,8 @@ class TourView(ListAPIView):
 
             id = request_data.get('id', '')
             package_title = request_data.get('package_title', '')
-            destination = request_data.get('destination', '')
-            city = request_data.get('city', '')
+            destination = request_data.get('destination_id', '')
+            city = request_data.get('city_id', '')
 
             if city and destination:
                 try:

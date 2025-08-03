@@ -55,7 +55,7 @@ const [confirmationState,setConfirmationState]=useState(false)
       },
       {
         header: 'Package',
-        accessorKey: 'related_package.name',
+        accessorKey: 'related_package.package_details.package_title',
        
       },
       {

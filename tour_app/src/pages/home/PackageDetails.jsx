@@ -51,7 +51,7 @@ export default function PackageDetails() {
     email: Yup.string().email('Enter a valid email address').required('Email is required'),
     phone: Yup.string().matches(/^[0-9]+$/, 'Must be digits').min(10).required(),
     message: Yup.string(),
-    scheduleId: Yup.string().required(),
+    related_package_id: Yup.string().required(),
   });
 
   return (
@@ -127,7 +127,7 @@ export default function PackageDetails() {
               email: '',
               phone: '',
               message: '',
-              scheduleId: packageData.id,
+              related_package_id: packageData.id,
             }}
             validationSchema={enquirySchema}
             onSubmit={handleSubmit}
@@ -155,7 +155,7 @@ export default function PackageDetails() {
                   <label className="block text-sm font-medium">Schedule</label>
                   <Field
                     as="select"
-                    name="scheduleId"
+                    name="related_package_id"
                     className="w-full p-2 mt-1 border rounded-md"
                   >
                     <option value={packageData.id}>
