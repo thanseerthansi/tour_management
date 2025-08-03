@@ -1,0 +1,29 @@
+# Ignore Python files (for Django)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Django env files
+*.env
+
+# Ignore logs and OS files
+*.log
+.DS_Store
+
+# React: Common ignores
+node_modules/
+build/
+dist/
+*.local
+
+# Editor folders
+.vscode/
+.idea/
+*.sw?
+# Ignore any file starting with "kendo."
+kendo.*
+
+# (Optional) Ignore from any subfolder too
+**/kendo.*
